@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="static/registration.css" />
+  <title>Registration</title>
+
+ 
+</head>
+ <body>
+
+<div class="register-page">
+        {% csrf_token %}
+
+    <div class="form">
+      <form class="register-form" method="POST" action="">
+        {% csrf_token %}
+        <h2 class="register-title">REGISTER</h2>
+        <h4>{{form.username.label}}</h4>
+            {{form.username}}<br><br>
+        <h4>{{form.first_name.label}}</h4>
+        {{form.first_name}} <br><br>
+         <h4>{{form.last_name.label}}</h4>
+        {{form.last_name}}<br><br>
+         <h4>{{form.email.label}}</h4>
+        {{form.email}}<br><br>
+        <h4>{{form.password1.label}}</h4>
+        <h4>{{form.password1}}<br><br>
+        {{form.password2.label}}</h4>
+        {{form.password2}} <br> <br>
+        <button type="submit"> Create </button>
+        <br><br>
+        <p class="message">Already registered? <a href='login'>Log In</a></p>
+        </form>
+        {{ form.errors }}
+    </div>
+
+  </div>
+</body>
+
+</html>

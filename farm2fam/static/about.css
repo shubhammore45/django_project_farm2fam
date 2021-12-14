@@ -1,0 +1,305 @@
+body 
+{
+  color:black;
+  font: 100%/1.4, 'Montserrat', Sans-serif;
+  margin: 0; padding: 0; border: 0;
+  max-height: 100%;
+  max-width: 100%;
+}
+nav{
+	background: #f2f2f2 ;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	height: 70px;
+	padding: 20px 120px;
+  
+}
+
+nav .logo{
+	color: green;
+	font-size: 30px;
+	font-weight: 600;
+	letter-spacing: -1;
+}
+nav .nav-items{
+	display: flex;
+	flex: 0.9;
+	list-style: none;
+	padding: 0 0 0 40px;
+}
+
+nav .nav-items li{
+padding: 0 15px;
+}
+
+nav .nav-items li a {
+	color: black;
+	font-size: 18px;
+	font-weight: 400;
+	text-decoration: none;
+
+}
+
+nav .nav-items li a:hover {
+	color: green;
+}
+ /*container-1*/
+ h3{
+ 	text-align: center;
+ 	margin-top: 40px;
+ 	font-size: 40px;
+ 	margin-bottom: 20px;
+ }
+img{
+	margin-left: 400px;
+	background-position: center;
+}
+
+p{
+	margin-top: 10px;
+	text-align: center;
+	font-size: 22px;
+	line-height: 35px;
+}
+
+.opp-bnnr
+{
+  width:inherit;
+  height:500px;
+  margin-top: 20px;
+  margin-bottom:10px;
+}
+
+.clmn {
+  float: left;
+  width: 33.3%;
+  padding: 0 10px;
+}
+.row {margin: 0 -1px;}
+
+@media screen and (max-width: 767px) {
+  .clmn {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+.card {
+  border-radius: 25px;
+  border: 2px black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 700px;
+  height: 450px;
+  margin: 0 auto;
+}
+
+.name 
+{
+  height: 60px;
+  width: inherit;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  font-size: 40px;
+  color: green;
+}
+.host{
+	margin-left: 270px;
+}
+/*List */
+.card ul 
+{
+  line-height: 45px;
+  font-size: 20px;
+  padding-left:20px; 
+}
+.fa-li
+{
+  color: green;
+}
+
+.p1{
+	font-size: 18px;
+	line-height: 30px;
+}
+
+.p2{
+	margin-top: 30px;
+	font-size: 18px;
+	line-height: 30px;
+	margin-bottom: 20px;
+}
+.site-footer
+{
+  background-color:#f2f2f2;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+}
+.site-footer hr
+{
+  border-top-color:#bbb;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color:black;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color:#737373;
+}
+.site-footer a:hover
+{
+  color:green;
+  text-decoration:none;
+}
+.footer-links
+{
+  padding-left:0;
+  list-style:none
+}
+.footer-links li
+{
+  display:block
+}
+.footer-links a
+{
+  color:#737373
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color:green;
+  text-decoration:none;
+}
+.footer-links.inline li
+{
+  display:inline-block
+}
+.site-footer .social-icons
+{
+  text-align:right
+}
+.site-footer .social-icons a
+{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color:#33353d
+}
+.copyright-text
+{
+  margin:0
+}
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    padding-bottom:0
+  }
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center
+  }
+}
+.social-icons
+{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none
+}
+.social-icons li
+{
+  display:inline-block;
+  margin-bottom:4px
+}
+.social-icons li.title
+{
+  margin-right:15px;
+  text-transform:uppercase;
+  color:#96a2b2;
+  font-weight:700;
+  font-size:13px
+}
+.social-icons a{
+  background-color:#eceeef;
+  color:#818a91;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover
+{
+  color:#fff;
+  background-color:green
+}
+.social-icons.size-sm a
+{
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px
+}
+.social-icons a.facebook:hover
+{
+  background-color:green
+}
+.social-icons a.twitter:hover
+{
+  background-color:green
+}
+.social-icons a.linkedin:hover
+{
+  background-color:green
+}
+.social-icons a.dribbble:hover
+{
+  background-color:green
+}
+@media (max-width:767px)
+{
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
+  }
+}
+
+.p3{
+	font-size: 15px;
+}
+.copyright-text{
+	margin-right: 350px;
+}

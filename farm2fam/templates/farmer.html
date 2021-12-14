@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="static/farmer.css" />
+    <title>Farmer</title>
+
+    <!-- Awesome font -->
+    <script src="https://kit.fontawesome.com/a508a51525.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }}-dismissible fade show" role="alert">
+        {{ message }}
+    </div>
+    {% endfor %}
+    {% endif %}
+    <div class="container">
+        <div class="upper">
+
+            <div class="back"><a href="buy"><i class="fas fa-arrow-circle-left" aria-hidden="true"></i></a>
+                <h5>Trust us with your harvest and be a part of bringing <br> about a change in the agriculture
+                    industry.</h5>
+            </div>
+            <div class="up-info">
+                <p>Farm2Family works with farmers across the country.</p>
+                <h6>Give us a missed call</h6>
+                <div class="call">
+                    <a href="tel:999999999">
+                        <em>
+                            <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                        </em>
+                        <span>999999999</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="lower">
+
+            <div class="needmorehelp_info needmorehelp_top">
+                <div class="down-info">
+                    <h3>Eager to work with us?</h3>
+                    <p>Leave us your details below and we’ll get in touch with you.</p>
+                </div>
+            </div>
+
+            <div class="needmorehelp_info needmorehelp_bottom">
+                <div class="message">
+
+
+                    {% csrf_token %}
+
+                    <form method="post" id="sell_form">
+                        {% csrf_token %}
+                        <ul>
+                            <li class="fullwidth">
+                                <h6>Your name</h6>
+                                <input type="text" placeholder="Enter your name" class="needmorehelp_input"
+                                    name="farmer_name">
+                            </li>
+                            <li class="fullwidth">
+                                <h6>Contact Number</h6>
+                                <input type="text" placeholder="Enter your contact number" class="needmorehelp_input"
+                                    name="contact_no">
+                            </li>
+                            <li class="fullwidth">
+                                <h6>Email Address</h6>
+                                <input type="text" placeholder="Enter your email id" class="needmorehelp_input"
+                                    name="farmer_email">
+                            </li>
+                            <li>
+                                <h6>Address</h6>
+                                <input type="text" placeholder="Enter your address" class="needmorehelp_input"
+                                    id="business_address" name="address">
+                            </li>
+
+                            <li class="innerform-1">
+                                <h6>SKUs/Products</h6>
+                                <input type="text" placeholder="Enter your SKUs/Products" class="needmorehelp_input"
+                                    name="sku">
+                            </li>
+
+
+                            <li class="innerform-1">
+                                <h6>Town</h6>
+                                <input type="text" placeholder="Enter your town" class="needmorehelp_input" id="city"
+                                    name="town">
+                            </li>
+                            <li class="innerform-2">
+                                <h6>District</h6>
+                                <input type="text" placeholder="Enter your district" class="needmorehelp_input"
+                                    name="district">
+                            </li>
+                            <li class="innerform-2">
+                                <h6>Pincode</h6>
+                                <input type="text" placeholder="Enter your pincode" class="needmorehelp_input"
+                                    id="pincode" name="pincode">
+                            </li>
+                        </ul>
+
+                        <div class="submit_btn"><button type="submit"><span>Submit</span></button></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

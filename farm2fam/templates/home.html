@@ -1,0 +1,660 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="static/style.css">
+    <title>FARM2FAMILY</title>
+</head>
+<!--Nav Bar Section-->
+
+<body>
+<style>
+    body 
+{
+  color:black;
+  font: 100%/1.4, 'Montserrat', Sans-serif;
+  margin: 0; padding: 0; border: 0;
+  max-height: 100%;
+  max-width: 100%;
+}
+nav{
+	background: #f2f2f2 ;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	height: 70px;
+	padding: 20px 120px;
+  
+}
+
+nav .logo{
+	color: green;
+	font-size: 30px;
+	font-weight: 600;
+	letter-spacing: -1;
+}
+nav .nav-items{
+	display: flex;
+	flex: 0.9;
+	list-style: none;
+	padding: 0 0 0 40px;
+}
+
+nav .nav-items li{
+padding: 0 15px;
+}
+
+nav .nav-items li a {
+	color: black;
+	font-size: 18px;
+	font-weight: 400;
+	text-decoration: none;
+
+}
+
+nav .nav-items li a:hover {
+	color: green;
+
+
+}
+ /*container-1*/
+.container-bnnr
+{
+  max-width:inherit;
+  height: 500px;
+}
+.image
+{
+  float: right;
+  padding-top: 50px;
+}
+.btn1
+{
+  margin-top: 40px;
+}
+.transit
+{ opacity: 0; 
+  position: relative;
+  animation: mymove 3s ease-in-out 0s forwards;
+  padding-top:80px;
+  font-weight:800px;
+  
+} 
+.fade
+{
+  opacity: 0; 
+  animation: fadeIn 1s ease-in-out 0s forwards;
+  animation-delay: 3s;
+  padding-top:20px;
+}  
+@keyframes mymove
+{
+  from {opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  to
+  {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeIn
+{
+  from 
+  { 
+    opacity: 0;
+    -webkit-transform: none;
+    transform: none;
+  }
+
+  to 
+  {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+/*container-2*/
+.info-bnnr
+{
+  margin-top: 100px;
+  margin-bottom: 40px;
+}
+.column {
+  float: left;
+  padding: 10px;
+  height: 500px; /* Should be removed. Only for demonstration */
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+    display:block;
+    margin: 20px;
+  }
+}
+
+
+/*for styling inner divs and content*/
+.abt
+{
+  margin-left: 200px;
+  margin-right: 200px;
+}
+.clm-right h1
+{
+  text-align: center;
+  color: black;
+  font-weight: 600px;
+  text-shadow: 2px 2px 4px #000000;
+} 
+.clm-right p
+{ 
+  color:#828287;
+  display:block;
+  text-align: center;
+  font-size: 20px;
+}
+ .abt .btn2
+{
+  margin-top: 20px;
+  margin-left: 200px;
+}
+
+/*LOGO1*/
+.logo-top
+{
+  width: inherit;
+  height: 75px;
+  color: green;
+	font-size: 50px;
+	font-weight: 600;
+	letter-spacing: -1;
+  position: relative;
+ 
+}
+.txt
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -25px 0 0 -25px;
+}
+
+/*FLIP CARD STYLE*/
+.flip-card {
+  border-radius: 25px;
+  border: 1px;
+  border-style: none;
+  background-color: transparent;
+  width: 350px;
+  height: 350px;
+  perspective: 1000px;
+  margin: 20px;
+}
+
+.flip-card-inner {
+  border-radius: 25px;
+  border: 1px;
+  border-style: none;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  border-radius: 25px;
+  border: 1px;
+  border-style: none;
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  border-radius: 25px;
+  border: 1px;
+  border-style: none;
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+/*container 3*/
+.content
+{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: 800px;
+  text-align: center;
+}
+
+/*container 4*/
+.opp-bnnr
+{
+  width:inherit;
+  height:500px;
+  margin-top: 10px;
+  margin-bottom:10px;
+}
+
+.clmn {
+  float: left;
+  width: 33.3%;
+  padding: 0 10px;
+}
+.row {margin: 0 -1px;}
+
+@media screen and (max-width: 767px) {
+  .clmn {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+.card {
+  border-radius: 25px;
+  border: 2px black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 350px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+.name 
+{
+  height: 60px;
+  width: inherit;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  font-size: 40px;
+  color: green;
+}
+
+/*List */
+.card ul 
+{
+  line-height: 45px;
+  font-size: 20px;
+  padding-left:20px; 
+}
+.fa-li
+{
+  color: green;
+}
+
+
+/*Footer*/
+.site-footer
+{
+  background-color:#f2f2f2;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+}
+.site-footer hr
+{
+  border-top-color:#bbb;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color:black;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color:#737373;
+}
+.site-footer a:hover
+{
+  color:green;
+  text-decoration:none;
+}
+.footer-links
+{
+  padding-left:0;
+  list-style:none
+}
+.footer-links li
+{
+  display:block
+}
+.footer-links a
+{
+  color:#737373
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color:green;
+  text-decoration:none;
+}
+.footer-links.inline li
+{
+  display:inline-block
+}
+.site-footer .social-icons
+{
+  text-align:right
+}
+.site-footer .social-icons a
+{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color:#33353d
+}
+.copyright-text
+{
+  margin:0
+}
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    padding-bottom:0
+  }
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center
+  }
+}
+.social-icons
+{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none
+}
+.social-icons li
+{
+  display:inline-block;
+  margin-bottom:4px
+}
+.social-icons li.title
+{
+  margin-right:15px;
+  text-transform:uppercase;
+  color:#96a2b2;
+  font-weight:700;
+  font-size:13px
+}
+.social-icons a{
+  background-color:#eceeef;
+  color:#818a91;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover
+{
+  color:#fff;
+  background-color:green
+}
+.social-icons.size-sm a
+{
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px
+}
+.social-icons a.facebook:hover
+{
+  background-color:green
+}
+.social-icons a.twitter:hover
+{
+  background-color:green
+}
+.social-icons a.linkedin:hover
+{
+  background-color:green
+}
+.social-icons a.dribbble:hover
+{
+  background-color:green
+}
+@media (max-width:767px)
+{
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
+  }
+}
+
+</style>
+    <nav>
+        <div class="logo">Farm2Family</div>
+        <div class="nav-items">
+
+            <li><a href="home">Home</a></li>
+            <li><a href="about">About Us</a></li>
+            <li><a href="buy">Buy/Sell</a></li>
+            <li><a href="registration">Login/Register</a></li>
+        </div>
+    </nav>
+
+    <!--container 1-->
+    <section>
+        <div class=" container-fluid container-bnnr">
+            <img class="image img-responsive" src="static/truck3(1)(1).png" style="width: 800px;">
+            <div class="transit" style="width: 500px;">
+                <h1><span><b>Revolutionizing the Fresh Produce Supply Chain</b></span></h1>
+            </div>
+            <div class="fade" style="width: 500px;">
+                <h3><span>We source fresh produce from farms and sell to business in India</span></h3>
+                <div class="btn1">
+                    <a href="buy" class="btn btn-success btn-lg " role="button">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <!--container-2-->
+        <div class="container-fluid info-bnnr">
+            <div class="row">
+                <div class="column clm-left" style="width: 40%">
+                    <div class="logo-top"><span class="txt"> Farm2Family</span></div>
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="static/about1.jpg" alt="first"
+                                    style="width:350px;height:350px; border-radius: 25px;">
+                            </div>
+                            <div class="flip-card-back">
+                                <img src="static/about2.jpg" alt="second"
+                                    style="width:350px; height:350px; border-radius: 25px; ">
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="column clm-right" style="width: 60% ">
+                    <div class="abt">
+                        <h1>About Us</h1>
+                        <p>Farm2Familybecomes an intermediate between farmers and business we source fresh produce
+                            from farmers to business using technology.
+                        </p>
+                        <div class="btn2">
+                            <a href="about" class="btn btn-success btn-lg" role="button">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Container 3-->
+        <div class="container-fluid content">
+            <h1><b>Creating opportunities for every one</b></h1>
+        </div>
+        <!--container 4-->
+        <div class="container-fluid opp-bnnr">
+            <div class="row">
+                <div class="clmn">
+                    <div class="card">
+                        <div class="name">
+                            <b>Farmers</b>
+                        </div>
+                        <ul class="fa-ul">
+                            <li><span class="fa-li"><i class="fa fa-dot-circle-o "></i></span> Better Market Price </li>
+                            <li><span class="fa-li"><i class="fa fa-dot-circle-o "></i></span>Transparent Weighting</li>
+                            <li><span class="fa-li"><i class="fa fa-dot-circle-o"></i></span>On time Paymement</li>
+                            <li><span class="fa-li"><i class="fa fa-dot-circle-o"></i></span>One platform for Selling
+                                Produce</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="clmn">
+                    <div class="card">
+                        <div class="name">
+                            <b>Consumers</b>
+                        </div>
+                        <ul class="fa-ul">
+                            <li><span class="fa-li"><i class="fa fa-dot-circle-o "></i></span>Fresh Produce</li>
+                            <li><span class="fa-li"><i class="fa fa-dot-circle-o "></i></span>Door Step Delivery</li>
+                            <li><span class="fa-li"><i class="fa fa-dot-circle-o"></i></span>Reasonable Rates</li>
+                            <li><span class="fa-li"><i class="fa fa-dot-circle-o"></i></span>One Platform for Buying
+                                Produce</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="clmn">
+                    <div class="card">
+                        <div class="name">
+                            <b>Retailer</b>
+                        </div>
+                        <ul class="fa-ul">
+                            <li><span class="fa-li"><i class="fa fa-dot-circle-o "></i></span>Competitive Pricing</li>
+                            <li><span class="fa-li"><i class="fa fa-dot-circle-o "></i></span>Time Saving proces</li>
+                            <li><span class="fa-li"><i class="fa fa-dot-circle-o"></i></span>No Middle Man long Chain
+                            </li>
+                            <li><span class="fa-li"><i class="fa fa-dot-circle-o"></i></span>Quality Produce</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <!-- Site footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <h6>About</h6>
+                    <p class="text-justify">Some Text</p>
+                </div>
+
+                <div class="col-xs-6 col-md-3">
+                    <h6>Company</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Buy/Sell</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-xs-6 col-md-3">
+                    <h6>Resource</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                    <p class="copyright-text">Copyright &copy; 2021 All Rights Reserved by Farm2Family.
+                    </p>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <ul class="social-icons">
+                        <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                        <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
